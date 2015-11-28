@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <iostream>
+#include <thread>
 
 static void errMsg( const char* pMsg )
 {
@@ -83,7 +84,7 @@ namespace tl
             execv(executable.c_str(), (char **)&argvector[0]);
 
             /* Should only execute on error. */
-            perror( "execlp()" );
+            perror("execlp()");
             exit(255);
         }
         else
@@ -99,22 +100,31 @@ namespace tl
 
 
     void Process::wait() {
+        std::cerr << "Writting stdin" << std::endl;
         writeStdin();
+        std::cerr << "Done" << std::endl;
+
+        std::cerr << "Spawning reader thread..." << std::endl;
+        std::thread reader(&Process::readStdout, this);
+
+        std::cerr << "Waiting... " << std::endl;
 
         int status;
-
         if (waitpid(pid, &status, 0) == -1)
         {
             perror("waitpid()");
             exit(255);
         }
 
+        std::cerr << "Waiting done" << std::endl;
+
         if (WIFEXITED(status))
             fprintf(stderr, "exit status: %d\n", WEXITSTATUS(status));
         if (WIFSIGNALED(status))
             fprintf(stderr, "signal status: %d\n", WTERMSIG(status));
         fflush(stderr);
-        readStdout();
+
+        reader.join();
     }
 
     void Process::writeStdin() {

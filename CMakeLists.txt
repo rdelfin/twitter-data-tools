@@ -5,8 +5,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Requirements
 find_package(Armadillo REQUIRED)
+find_package (Threads)
 
-set(link-dirs ${ARMADILLO_LIBRARIES})
+set(link-dirs ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 # Include directories. Should contain the include folder, as well as libraries
 include_directories(include
@@ -14,7 +15,8 @@ include_directories(include
 
 
 # Executable and linking
-add_executable(dictionary representation-parser/src/dictionary-generator.cpp tools-lib/src/Process.cpp)
+add_executable(dictionary representation-parser/src/dictionary-generator.cpp
+                          tools-lib/src/Process.cpp)
 
 target_link_libraries(dictionary ${link-dirs})
 

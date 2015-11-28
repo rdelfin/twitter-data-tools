@@ -14,15 +14,20 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c199258-a689-4d3f-9873-720efd000f9b" name="Default" comment="Created Process class to handle process execution and creation in a C++ like way. Not yet tested.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/tools-lib/Process.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools-lib/src/Process.cpp" />
+    <list default="true" id="2c199258-a689-4d3f-9873-720efd000f9b" name="Default" comment="Fixed bug in Process where process would not end because redirection had not yet been read. Could be an issue with the Java executable (since any other script works without issues). Now reading script without issues.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/representation-parser/Dictonary.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" />
+    </list>
+    <list id="00e158f4-8815-4d6d-befd-703a47e49c2d" name="Rejected commit: Default" comment="Fixed bug in Process where process would not end because redirection had not yet been read. Could be an issue with the Java executable (since any other script works without issues). Now reading script without issues.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools-lib/src/Process.cpp" afterPath="$PROJECT_DIR$/tools-lib/src/Process.cpp" />
     </list>
     <ignored path="twitter-data-tools.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -53,10 +58,40 @@
         <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="e#57#76#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dictonary.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dictonary.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/representation-parser/Dictonary.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/ark-tweet-nlp-0.3.2/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/include/tools-lib/Process.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="23" />
               <folding>
                 <element signature="e#125#143#0" expanded="true" />
               </folding>
@@ -76,8 +111,8 @@
       <file leaf-file-name="Process.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools-lib/src/Process.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.1394515">
-              <caret line="151" column="37" selection-start-line="151" selection-start-column="37" selection-end-line="151" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="107" column="49" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
               <folding>
                 <element signature="e#373#403#0" expanded="true" />
               </folding>
@@ -105,10 +140,10 @@
         <option value="$PROJECT_DIR$/data-tagger/src/CsvReader.cpp" />
         <option value="$PROJECT_DIR$/data-tagger/src/CsvRecord.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" />
         <option value="$PROJECT_DIR$/include/tools-lib/Process.h" />
         <option value="$PROJECT_DIR$/tools-lib/src/Process.cpp" />
+        <option value="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -249,6 +284,10 @@
               <option name="myItemId" value="include" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="representation-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -262,11 +301,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/representation-parser/src" />
+      <recent name="$PROJECT_DIR$/include/representation-parser" />
       <recent name="$PROJECT_DIR$/include/tools-lib" />
       <recent name="$PROJECT_DIR$/tools-lib/src" />
-      <recent name="$PROJECT_DIR$/representation-parser/src" />
       <recent name="$PROJECT_DIR$/include/data-tagger" />
-      <recent name="$PROJECT_DIR$/data-tagger/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Build All">
@@ -376,7 +415,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -410,7 +449,8 @@
     <MESSAGE value="Added copy functionality to cmakelists." />
     <MESSAGE value="Created Process class to handle process execution and creation in a C++ like way." />
     <MESSAGE value="Created Process class to handle process execution and creation in a C++ like way. Not yet tested." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Process class to handle process execution and creation in a C++ like way. Not yet tested." />
+    <MESSAGE value="Fixed bug in Process where process would not end because redirection had not yet been read. Could be an issue with the Java executable (since any other script works without issues). Now reading script without issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in Process where process would not end because redirection had not yet been read. Could be an issue with the Java executable (since any other script works without issues). Now reading script without issues." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,6 +459,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#57#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -776,14 +826,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33307928">
           <caret line="305" column="13" selection-start-line="305" selection-start-column="13" selection-end-line="305" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/twitter-data/tweets-text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.589939">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ark-tweet-nlp-0.3.2/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/Dictonary.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/tools-lib/Process.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="e#125#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -791,27 +873,25 @@
     <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="e#57#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/tools-lib/Process.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding>
-            <element signature="e#125#143#0" expanded="true" />
-          </folding>
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools-lib/src/Process.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.1394515">
-          <caret line="151" column="37" selection-start-line="151" selection-start-column="37" selection-end-line="151" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="107" column="49" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
           <folding>
             <element signature="e#373#403#0" expanded="true" />
           </folding>
