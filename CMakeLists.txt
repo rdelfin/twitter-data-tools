@@ -14,7 +14,7 @@ include_directories(include
 
 
 # Executable and linking
-add_executable(dictionary representation-parser/src/dictionary-generator.cpp)
+add_executable(dictionary representation-parser/src/dictionary-generator.cpp tools-lib/src/Process.cpp)
 
 target_link_libraries(dictionary ${link-dirs})
 
@@ -23,9 +23,6 @@ add_custom_target(CopyConfig ${CMAKE_COMMAND} -E copy_directory
                   ${CMAKE_CURRENT_SOURCE_DIR}/config
                   ${CMAKE_CURRENT_BINARY_DIR}/config)
 add_dependencies(dictionary CopyConfig)
-#file(COPY
-#     ${CMAKE_CURRENT_SOURCE_DIR}/config
-#     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 
 #CMAKE_RUNTIME_OUTPUT_DIRECTORY
