@@ -14,12 +14,12 @@ class Dictionary;
 class Tweet {
 public:
     Tweet();
-    Tweet(std::string tweet, std::string tokenizedTweet);
+    Tweet(std::string tokenizedTweet, Dictionary*);
 
     ~Tweet();
 private:
     std::vector<DictionaryEntry *> tokens;
-    Dictionary *dict;
+    Dictionary* dict;
 };
 
 
