@@ -16,7 +16,11 @@ include_directories(include
 
 # Executable and linking
 add_executable(dictionary representation-parser/src/dictionary-generator.cpp
-                          tools-lib/src/Process.cpp)
+                          representation-parser/src/Tweet.cpp
+                          representation-parser/src/Dictonary.cpp
+                          representation-parser/src/DictionaryEntry.cpp
+                          tools-lib/src/Process.cpp
+                          tools-lib/src/StringUtils.cpp)
 
 target_link_libraries(dictionary ${link-dirs})
 
