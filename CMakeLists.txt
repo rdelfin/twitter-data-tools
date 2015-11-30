@@ -16,7 +16,8 @@ include_directories(include
 set(REPRESENTATION-PARSER_SRC representation-parser/src/dictionary-generator.cpp
                               representation-parser/src/Tweet.cpp
                               representation-parser/src/Dictonary.cpp
-                              representation-parser/src/DictionaryEntry.cpp)
+                              representation-parser/src/DictionaryEntry.cpp
+                              representation-parser/src/TweetLoader.cpp)
 set(TOOLS-LIB_SRC tools-lib/src/Process.cpp
                   tools-lib/src/StringUtils.cpp)
 

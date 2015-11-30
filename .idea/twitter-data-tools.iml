@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/DictionaryEntry.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/Dictonary.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/Tweet.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/TweetLoader.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/dictionary-generator.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tools-lib/src/Process.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tools-lib/src/StringUtils.cpp" isTestSource="false" />

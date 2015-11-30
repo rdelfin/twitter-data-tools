@@ -10,6 +10,7 @@
 #include <representation-parser/DictionaryEntry.h>
 #include <tools-lib/StringUtils.h>
 #include <representation-parser/Tweet.h>
+#include <representation-parser/TweetLoader.h>
 
 #include "tools-lib/Process.h"
 
@@ -19,17 +20,22 @@ inline void remove_from_stdout(unsigned chars);
 int main(int argc, char* argv[]) {
 
     /* Get the current working directory, where the config directory should be located */
-    char cwd[512];
-    getcwd(cwd, sizeof(cwd));
 
     // TODO: Move these declarations into a json config file... Or something.
     /* Define paths for the tokenize script as well as the data. These are at constant locations */
-    std::string scriptPath(cwd), dataPath(cwd);
-    scriptPath += "/config/ark-tweet-nlp-0.3.2/twokenize.sh";
-    dataPath += "/config/twitter-data/tweets-text.txt";
+    std::string dataPath = "/config/twitter-data/training.1600000.processed.noemoticon.csv";
+
+    std::cout << "Starting..." << std::endl;
+
+    Dictionary dict;
+
+    TweetLoader tl(dataPath, &dict);
+    tl.load();
+
+    std::cout << "Done!" << std::endl;
 
     // Runs the twokenize script with the default shell.
-    tl::Process p("/bin/sh", {scriptPath, dataPath});
+    /*tl::Process p("/bin/sh", {scriptPath, dataPath});
 
     // Start the program and wait (no input).
     p.start();
@@ -72,7 +78,7 @@ int main(int argc, char* argv[]) {
     }
 
     std::cout << "----------------------------" << std::endl;
-    std::cout << "Number of unique terms in dictionary: " << dictionary.dictionarySize() << std::endl;
+    std::cout << "Number of unique terms in dictionary: " << dictionary.dictionarySize() << std::endl;*/
 }
 
 inline unsigned num_len(unsigned n)
