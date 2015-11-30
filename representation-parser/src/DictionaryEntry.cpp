@@ -8,14 +8,18 @@
 
 DictionaryEntry::DictionaryEntry() { }
 
-DictionaryEntry::DictionaryEntry(std::string pattern, bool isRegex)
-    : pattern(pattern), isRegex(isRegex) { }
+DictionaryEntry::DictionaryEntry(std::string term)
+    : pattern(term), isRegex(false), name(term) { }
+
+DictionaryEntry::DictionaryEntry(std::string pattern, std::string name)
+    : pattern(pattern), isRegex(true), name(name) { }
 
 
 bool DictionaryEntry::isEntry(std::string s) {
     if(isRegex) {
         std::regex reg(pattern);
-        return std::regex_match(s, reg);
+        bool result = std::regex_match(s, reg);
+        return result;
     }
     else {
         return tl::StringUtils::trim(s) == pattern;

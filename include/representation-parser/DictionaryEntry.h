@@ -11,7 +11,8 @@ class DictionaryEntry
 {
 public:
     DictionaryEntry();
-    DictionaryEntry(std::string pattern, bool isRegex = false);
+    DictionaryEntry(std::string term);
+    DictionaryEntry(std::string pattern, std::string name);
 
     bool isEntry(std::string);
 
@@ -19,9 +20,14 @@ public:
         return isEntry(term);
     }
 
+    const std::string& getName() const { return name; }
+    bool getIsRegex() const { return isRegex; }
+
+
     ~DictionaryEntry();
 private:
     std::string pattern;
+    std::string name;
     bool isRegex;
 };
 

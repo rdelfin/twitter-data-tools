@@ -13,14 +13,15 @@ set(link-dirs ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 include_directories(include
                     ${ARMADILLO_INCLUDE_DIRS})
 
+set(REPRESENTATION-PARSER_SRC representation-parser/src/dictionary-generator.cpp
+                              representation-parser/src/Tweet.cpp
+                              representation-parser/src/Dictonary.cpp
+                              representation-parser/src/DictionaryEntry.cpp)
+set(TOOLS-LIB_SRC tools-lib/src/Process.cpp
+                  tools-lib/src/StringUtils.cpp)
 
 # Executable and linking
-add_executable(dictionary representation-parser/src/dictionary-generator.cpp
-                          representation-parser/src/Tweet.cpp
-                          representation-parser/src/Dictonary.cpp
-                          representation-parser/src/DictionaryEntry.cpp
-                          tools-lib/src/Process.cpp
-                          tools-lib/src/StringUtils.cpp)
+add_executable(dictionary ${REPRESENTATION-PARSER_SRC} ${TOOLS-LIB_SRC})
 
 target_link_libraries(dictionary ${link-dirs})
 

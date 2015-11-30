@@ -14,17 +14,27 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c199258-a689-4d3f-9873-720efd000f9b" name="Default" comment="">
+    <list default="true" id="2c199258-a689-4d3f-9873-720efd000f9b" name="Default" comment="Added code to display all terms and group user handles and URL's into a single category.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/representation-parser/TweetLoader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp" />
+    </list>
+    <list id="8560c82b-ccca-47f1-b38c-3bd965c302c9" name="Rejected commit: Default" comment="Added code to display all terms and group user handles and URL's into a single category.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/twitter-data-tools.iml" afterPath="$PROJECT_DIR$/.idea/twitter-data-tools.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/representation-parser/Tweet.h" afterPath="$PROJECT_DIR$/include/representation-parser/Tweet.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/tools-lib/StringUtils.h" afterPath="$PROJECT_DIR$/include/tools-lib/StringUtils.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/Tweet.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/Tweet.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/representation-parser/Dictionary.h" afterPath="$PROJECT_DIR$/include/representation-parser/Dictionary.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h" afterPath="$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools-lib/src/StringUtils.cpp" afterPath="$PROJECT_DIR$/tools-lib/src/StringUtils.cpp" />
     </list>
     <ignored path="twitter-data-tools.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/CMakeLists.txt" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/twitter-data-tools.iml" ignored="false" />
+    <file path="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,36 +51,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.38525563">
+              <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dictionary-generator.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dictionary-generator.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9517241">
-              <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+            <state vertical-scroll-proportion="-11.379311">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
               <folding>
-                <element signature="e#57#76#0" expanded="true" />
+                <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+                <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+                <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+                <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringUtils.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/tools-lib/StringUtils.h">
+      <file leaf-file-name="TweetLoader.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/representation-parser/TweetLoader.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
-                <element signature="e#140#157#0" expanded="true" />
+                <marker date="1448845436720" expanded="true" signature="144:203" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="regex_compiler.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/4.8/bits/regex_compiler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="973" column="0" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +102,55 @@
         <entry file="file://$PROJECT_DIR$/representation-parser/src/Tweet.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dictionary.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/representation-parser/Dictionary.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dictonary.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <folding>
+                <marker date="1448777689294" expanded="true" signature="66:175" placeholder="..." />
+                <marker date="1448777689294" expanded="true" signature="262:266" placeholder="{...}" />
+                <marker date="1448777689294" expanded="true" signature="336:398" placeholder="{...}" />
+                <marker date="1448777689294" expanded="true" signature="456:768" placeholder="{...}" />
+                <marker date="1448777689294" expanded="true" signature="829:889" placeholder="{...}" />
+                <marker date="1448777689294" expanded="true" signature="933:963" placeholder="{...}" />
+                <marker date="1448777689294" expanded="true" signature="991:1058" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryEntry.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryEntry.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -122,16 +193,18 @@
         <option value="$PROJECT_DIR$/representation-parser/src/DictonaryEntry.cpp" />
         <option value="$PROJECT_DIR$/include/representation-parser/DictonaryEntry.h" />
         <option value="$PROJECT_DIR$/include/representation-parser/Dictonary.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/representation-parser/Tweet.h" />
+        <option value="$PROJECT_DIR$/tools-lib/src/StringUtils.cpp" />
+        <option value="$PROJECT_DIR$/include/tools-lib/StringUtils.h" />
+        <option value="$PROJECT_DIR$/representation-parser/src/Tweet.cpp" />
+        <option value="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" />
         <option value="$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h" />
         <option value="$PROJECT_DIR$/include/representation-parser/Dictionary.h" />
         <option value="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" />
-        <option value="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" />
-        <option value="$PROJECT_DIR$/include/representation-parser/Tweet.h" />
-        <option value="$PROJECT_DIR$/tools-lib/src/StringUtils.cpp" />
+        <option value="$PROJECT_DIR$/TweetLoader.h" />
+        <option value="$PROJECT_DIR$/TweetLoader.cpp" />
         <option value="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" />
-        <option value="$PROJECT_DIR$/include/tools-lib/StringUtils.h" />
-        <option value="$PROJECT_DIR$/representation-parser/src/Tweet.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -142,9 +215,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="2095" />
-    <option name="height" value="1416" />
+    <option name="height" value="1444" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -283,16 +356,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="CsvRe&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h&#10;csv&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h&#10;CSV&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h" />
+    <property name="SearchEverywhereHistoryKey" value="DictionaryE&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/representation-parser/DictionaryEntry.h&#10;CsvRe&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h&#10;csv&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h&#10;CSV&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/representation-parser/src" />
+      <recent name="$PROJECT_DIR$/include/representation-parser" />
       <recent name="$PROJECT_DIR$/include/tools-lib" />
       <recent name="$PROJECT_DIR$/tools-lib/src" />
-      <recent name="$PROJECT_DIR$/include/representation-parser" />
-      <recent name="$PROJECT_DIR$/representation-parser/src" />
       <recent name="$PROJECT_DIR$/include/data-tagger" />
     </key>
   </component>
@@ -397,24 +470,30 @@
       <option name="project" value="LOCAL" />
       <updated>1448771234689</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created test of Dictionary. First test resulted in 2756 terms. This will end up being an... Interesting problem.">
+      <created>1448773737247</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1448773737247</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="2095" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="2095" height="1444" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249642" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -436,7 +515,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Added gitignore" />
     <MESSAGE value="Added cmakelists.txt" />
     <MESSAGE value="Created CSVRecord and Reader classes (not yet implemented or fully decleared)" />
@@ -446,50 +524,21 @@
     <MESSAGE value="Created Process class to handle process execution and creation in a C++ like way. Not yet tested." />
     <MESSAGE value="Fixed bug in Process where process would not end because redirection had not yet been read. Could be an issue with the Java executable (since any other script works without issues). Now reading script without issues." />
     <MESSAGE value="Added Dictionary to facilitate adding Tweets and breaking them down into tokens. This includes:&#10;- Dictionary: Class stores a list of DictionaryEntry's as well and facilitates adding new Entry's&#10;- DictionaryEntry: A term in the dictionary. Can be expressed either as a regex or a literal string.&#10;- StringUtils: Class with static functions used for string utilities. Currently only trim." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Dictionary to facilitate adding Tweets and breaking them down into tokens. This includes:&#10;- Dictionary: Class stores a list of DictionaryEntry's as well and facilitates adding new Entry's&#10;- DictionaryEntry: A term in the dictionary. Can be expressed either as a regex or a literal string.&#10;- StringUtils: Class with static functions used for string utilities. Currently only trim." />
+    <MESSAGE value="Created test of Dictionary. First test resulted in 2756 terms. This will end up being an... Interesting problem." />
+    <MESSAGE value="Added code to display all terms and group user handles and URL's into a single category." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code to display all terms and group user handles and URL's into a single category." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#57#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools-lib/src/Process.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#373#403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/tools-lib/Process.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-          <folding>
-            <element signature="e#125#143#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,7 +555,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="e#57#76#0" expanded="true" />
+            <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+            <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -515,9 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#373#403#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,9 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-          <folding>
-            <element signature="e#125#143#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -544,7 +590,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="e#57#76#0" expanded="true" />
+            <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+            <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -553,9 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#373#403#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -563,9 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-          <folding>
-            <element signature="e#125#143#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,7 +625,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#57#76#0" expanded="true" />
+            <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+            <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -600,7 +646,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#57#76#0" expanded="true" />
+            <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+            <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -626,7 +675,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#57#76#0" expanded="true" />
+            <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+            <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -777,9 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="107" column="49" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
-          <folding>
-            <element signature="e#373#403#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -787,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23323171">
           <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,55 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49390244">
           <caret line="36" column="23" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="23" />
-          <folding>
-            <element signature="e#125#143#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/representation-parser/Dictionary.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <element signature="e#57#73#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25862068">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#57#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools-lib/src/StringUtils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="19" />
-          <folding>
-            <element signature="e#296#330#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,17 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="e#113#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,21 +863,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/c++/4.8/bits/regex_compiler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="973" column="0" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/representation-parser/src/Tweet.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/Dictionary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding>
+            <marker date="1448777689294" expanded="true" signature="66:175" placeholder="..." />
+            <marker date="1448777689294" expanded="true" signature="262:266" placeholder="{...}" />
+            <marker date="1448777689294" expanded="true" signature="336:398" placeholder="{...}" />
+            <marker date="1448777689294" expanded="true" signature="456:768" placeholder="{...}" />
+            <marker date="1448777689294" expanded="true" signature="829:889" placeholder="{...}" />
+            <marker date="1448777689294" expanded="true" signature="933:963" placeholder="{...}" />
+            <marker date="1448777689294" expanded="true" signature="991:1058" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools-lib/src/StringUtils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="19" />
+          <folding>
+            <element signature="e#296#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/TweetLoader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1448845436720" expanded="true" signature="144:203" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9517241">
-          <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+        <state vertical-scroll-proportion="-11.379311">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
           <folding>
-            <element signature="e#57#76#0" expanded="true" />
+            <marker date="1448845730692" expanded="true" signature="66:339" placeholder="..." />
+            <marker date="1448845730692" expanded="true" signature="460:2399" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2437:2580" placeholder="{...}" />
+            <marker date="1448845730692" expanded="true" signature="2629:2734" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38525563">
+          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>

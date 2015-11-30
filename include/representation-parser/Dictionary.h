@@ -14,10 +14,12 @@ class Dictionary {
 public:
     Dictionary();
 
-    void insertRegex(std::string);
+    void insertRegex(std::string pattern, std::string name);
     DictionaryEntry* getEntry(std::string);
 
-    size_t dictionarySize();
+    const DictionaryEntry* entryAt(size_t i) const;
+
+    size_t dictionarySize() const;
 
     ~Dictionary();
 private:

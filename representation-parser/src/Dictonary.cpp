@@ -13,8 +13,8 @@ Dictionary::Dictionary() {
 
 }
 
-void Dictionary::insertRegex(std::string pattern) {
-    entries.push_back(new DictionaryEntry(pattern, true));
+void Dictionary::insertRegex(std::string pattern, std::string name) {
+    entries.push_back(new DictionaryEntry(pattern, name));
 }
 
 DictionaryEntry* Dictionary::getEntry(std::string term) {
@@ -24,13 +24,18 @@ DictionaryEntry* Dictionary::getEntry(std::string term) {
         return *itResult;
     }
     else {
-        DictionaryEntry *result = new DictionaryEntry(term, false);
+        DictionaryEntry *result = new DictionaryEntry(term);
         entries.push_back(result);
         return result;
     }
 }
 
-size_t Dictionary::dictionarySize() {
+const DictionaryEntry* Dictionary::entryAt(size_t i) const
+{
+    return i >= dictionarySize() ? nullptr : entries[i];
+}
+
+size_t Dictionary::dictionarySize() const {
     return entries.size();
 }
 
