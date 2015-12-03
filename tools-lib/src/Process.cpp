@@ -1,5 +1,5 @@
 /*
- * Created by rdelfin on 11/25/15.
+ * Created by Ricardo Delfin Garcia on 11/25/15.
  * Code partially obtained from Eike Rathke:
  */
 
@@ -19,13 +19,7 @@
 #include <sys/wait.h>
 #include <iostream>
 #include <thread>
-
-static void errMsg( const char* pMsg )
-{
-    fflush( stdout );
-    fputs( pMsg, stderr );
-    fflush( stderr );
-}
+#include <fcntl.h>
 
 namespace tl
 {
@@ -64,11 +58,17 @@ namespace tl
             /* dup pipe read/write to stdin/stdout */
             dup2(pipe_in[0], STDIN_FILENO);
             dup2(pipe_out[1], STDOUT_FILENO);
+
             /* close unnecessary pipe descriptors for a clean environment */
             close(pipe_in[0]);
             close(pipe_in[1]);
             close(pipe_out[0]);
             close(pipe_out[1]);
+
+            /* Send STDERR_FILENO to /dev/null */
+            int devNullFd = open("/dev/null", O_WRONLY);
+            dup2(devNullFd, STDERR_FILENO);
+            close(devNullFd);
 
             /* Convert string vector to char array vector */
             std::vector<const char*> argvector;
@@ -100,14 +100,9 @@ namespace tl
 
 
     void Process::wait() {
-        std::cerr << "Writting stdin" << std::endl;
         writeStdin();
-        std::cerr << "Done" << std::endl;
 
-        std::cerr << "Spawning reader thread..." << std::endl;
         std::thread reader(&Process::readStdout, this);
-
-        std::cerr << "Waiting... " << std::endl;
 
         int status;
         if (waitpid(pid, &status, 0) == -1)
@@ -116,20 +111,11 @@ namespace tl
             exit(255);
         }
 
-        std::cerr << "Waiting done" << std::endl;
-
-        if (WIFEXITED(status))
-            fprintf(stderr, "exit status: %d\n", WEXITSTATUS(status));
-        if (WIFSIGNALED(status))
-            fprintf(stderr, "signal status: %d\n", WTERMSIG(status));
-        fflush(stderr);
-
         reader.join();
     }
 
     void Process::writeStdin() {
         FILE *stream;
-        errMsg("writing\n");
         if ((stream = fdopen(pipe_in[1], "a")) == NULL)
         {
             perror("fdopen() w");
@@ -163,7 +149,6 @@ namespace tl
 
         /* CLose the file stream */
         fclose(stream);
-        errMsg("reading done\n");
     }
 
 

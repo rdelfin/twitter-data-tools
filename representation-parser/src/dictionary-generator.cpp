@@ -5,14 +5,10 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <unistd.h>
 #include <representation-parser/Dictionary.h>
 #include <representation-parser/DictionaryEntry.h>
-#include <tools-lib/StringUtils.h>
 #include <representation-parser/Tweet.h>
 #include <representation-parser/TweetLoader.h>
-
-#include "tools-lib/Process.h"
 
 inline unsigned num_len(unsigned n);
 inline void remove_from_stdout(unsigned chars);
@@ -29,56 +25,27 @@ int main(int argc, char* argv[]) {
 
     Dictionary dict;
 
+    // Regex for handles
+    dict.insertRegex("^@[\\w]+$", "TWITTER_HANDLE_TOK");
+    // Regex for... url's?
+    dict.insertRegex("^((http|https):\\/\\/)?(www.)?[\\w-_]+(\\.[\\w-_]+){1,3}((\\/)|(\\/[\\w-_]+\\/?)+|((\\/[\\w-_]+)*\\/[\\w-_]+\\.[\\w-_]+))?$", "URL_TOK");
+    // Regex for hashtags (probably should not be here)
+    dict.insertRegex("^#\\w+$", "HASHTAG_TOK");
+
     TweetLoader tl(dataPath, &dict);
     tl.load();
-
-    std::cout << "Done!" << std::endl;
-
-    // Runs the twokenize script with the default shell.
-    /*tl::Process p("/bin/sh", {scriptPath, dataPath});
-
-    // Start the program and wait (no input).
-    p.start();
-    p.wait();
-
-    // Get the output and parse data
-    std::stringstream& ss = p.stdout();
-
-    Dictionary dictionary;
-
-    // Regex for handles
-    dictionary.insertRegex("^@[\\w]+$", "TWITTER_HANDLE_TOK");
-    // Regex for... url's?
-    dictionary.insertRegex("^((http|https):\\/\\/)?(www.)?[\\w-_]+(\\.[\\w-_]+){1,3}((\\/)|(\\/[\\w-_]+\\/?)+|((\\/[\\w-_]+)*\\/[\\w-_]+\\.[\\w-_]+))?$", "URL_TOK");
-    // Regex for hashtags (probably should not be here)
-    //dictionary.insertRegex("^#\\w+$", "HASHTAG_TOK");
-
-
-
-    std::vector<Tweet> tweets;
-
-    std::cout << "Added tweet #0";
-
-    std::string line;
-    size_t tweetidx = 0;
-    while(std::getline(ss, line)) {
-        std::vector<std::string> tweet = tl::StringUtils::split(line, '\t');
-        tweets.push_back(Tweet(tweet[0], &dictionary));
-
-        remove_from_stdout(num_len(tweetidx));
-
-        std::cout << ++tweetidx;
-        fflush(stdout);
-    }
+    tl.parse();
 
     std::cout << "Unique terms:" << std::endl << std::endl;
 
-    for(size_t i = 0; i < dictionary.dictionarySize(); i++) {
-        std::cout << dictionary.entryAt(i)->getName() << std::endl;
+    for(size_t i = 0; i < dict.dictionarySize(); i++) {
+        std::cout << dict.entryAt(i)->getName() << std::endl;
     }
 
     std::cout << "----------------------------" << std::endl;
-    std::cout << "Number of unique terms in dictionary: " << dictionary.dictionarySize() << std::endl;*/
+    std::cout << "Number of unique terms in dictionary: " << dict.dictionarySize() << std::endl;
+
+    std::cout << "Done!" << std::endl;
 }
 
 inline unsigned num_len(unsigned n)
