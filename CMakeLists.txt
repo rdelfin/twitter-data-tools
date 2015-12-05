@@ -5,19 +5,21 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Requirements
 find_package(Armadillo REQUIRED)
-find_package (Threads)
+find_package (Threads REQUIRED)
 
 set(link-dirs ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 # Include directories. Should contain the include folder, as well as libraries
 include_directories(include
-                    ${ARMADILLO_INCLUDE_DIRS})
+                    ${ARMADILLO_INCLUDE_DIRS}
+                    ${Jsoncpp_INCLUDE_DIR})
 
 set(REPRESENTATION-PARSER_SRC representation-parser/src/dictionary-generator.cpp
                               representation-parser/src/Tweet.cpp
                               representation-parser/src/Dictonary.cpp
                               representation-parser/src/DictionaryEntry.cpp
-                              representation-parser/src/TweetLoader.cpp)
+                              representation-parser/src/TweetLoader.cpp
+                              representation-parser/src/Configuration.cpp)
 set(TOOLS-LIB_SRC tools-lib/src/Process.cpp
                   tools-lib/src/StringUtils.cpp)
 
