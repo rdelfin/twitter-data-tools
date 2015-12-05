@@ -24,7 +24,9 @@ private:
     json data;
     std::string cwd;
 
-    static Configuration* _instance = nullptr;
+    static Configuration* _instance;
+
+    std::string joinPath(std::string);
 };
 
 

@@ -8,6 +8,7 @@
 #include <fstream>
 #include <unistd.h>
 
+Configuration* Configuration::_instance = nullptr;
 
 Configuration::Configuration()
     : Configuration("/config/config.json") {
@@ -23,15 +24,15 @@ Configuration::Configuration(std::string file) {
 }
 
 std::string Configuration::dataFile() {
-    return cwd + data["data"];
+    return joinPath(data["data"]);
 }
 
 std::string Configuration::output() {
-    return cwd + data["output_folder"];
+    return joinPath(data["output_folder"]);
 }
 
 std::string Configuration::tokenizer() {
-    return cwd + data["tokenizer"];
+    return joinPath(data["tokenizer"]);
 }
 
 Configuration* Configuration::instance() {
@@ -42,3 +43,6 @@ Configuration* Configuration::instance() {
     return _instance;
 }
 
+std::string Configuration::joinPath(std::string path) {
+    return cwd + path;
+}
