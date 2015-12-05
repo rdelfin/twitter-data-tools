@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 class DictionaryEntry;
 
@@ -24,6 +25,12 @@ public:
     ~Dictionary();
 private:
     std::vector<DictionaryEntry*> entries;
+
+    std::vector<DictionaryEntry*> regexEntries;
+
+    std::unordered_map<std::string, size_t> idxMap;
+
+    DictionaryEntry* foundRegex(std::string);
 };
 
 

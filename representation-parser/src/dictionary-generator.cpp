@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     Dictionary dict;
 
     // Regex for handles
-    dict.insertRegex("^@[\\w]+$", "TWITTER_HANDLE_TOK");
+    dict.insertRegex("^@\\w+$", "TWITTER_HANDLE_TOK");
     // Regex for... url's?
     dict.insertRegex("^((http|https):\\/\\/)?(www.)?[\\w-_]+(\\.[\\w-_]+){1,3}((\\/)|(\\/[\\w-_]+\\/?)+|((\\/[\\w-_]+)*\\/[\\w-_]+\\.[\\w-_]+))?$", "URL_TOK");
     // Regex for hashtags (probably should not be here)
