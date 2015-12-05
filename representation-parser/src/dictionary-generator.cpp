@@ -9,6 +9,7 @@
 #include <representation-parser/DictionaryEntry.h>
 #include <representation-parser/Tweet.h>
 #include <representation-parser/TweetLoader.h>
+#include <representation-parser/Configuration.h>
 
 inline unsigned num_len(unsigned n);
 inline void remove_from_stdout(unsigned chars);
@@ -17,11 +18,7 @@ int main(int argc, char* argv[]) {
 
     /* Get the current working directory, where the config directory should be located */
 
-    // TODO: Move these declarations into a json config file... Or something.
-    /* Define paths for the tokenize script as well as the data. These are at constant locations */
-    std::string dataPath = "/config/twitter-data/training.1600000.processed.noemoticon.csv";
-
-    std::cout << "Starting..." << std::endl;
+    std::cerr << "Starting..." << std::endl;
 
     Dictionary dict;
 
@@ -32,7 +29,7 @@ int main(int argc, char* argv[]) {
     // Regex for hashtags (probably should not be here)
     dict.insertRegex("^#\\w+$", "HASHTAG_TOK");
 
-    TweetLoader tl(dataPath, &dict);
+    TweetLoader tl(Configuration::instance()->dataFile(), &dict);
     tl.load();
     tl.parse();
 

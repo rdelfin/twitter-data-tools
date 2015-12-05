@@ -64,8 +64,6 @@ private:
     Dictionary* dictionary;
     std::vector<Tweet> tweetList;
 
-    static const std::string SCRIPT_PATH;
-
     std::string cwd;
 
     std::mutex tweetMutex;

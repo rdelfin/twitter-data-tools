@@ -9,10 +9,10 @@
 #include <algorithm>
 #include <tools-lib/Process.h>
 #include <representation-parser/TweetLoader.h>
+#include <representation-parser/Configuration.h>
 #include "representation-parser/Dictionary.h"
 #include "representation-parser/Tweet.h"
 
-const std::string TweetLoader::SCRIPT_PATH = "/config/ark-tweet-nlp-0.3.2/twokenize.sh";
 
 TweetLoader::~TweetLoader() {
 
@@ -97,7 +97,7 @@ void TweetLoader::parseRange(size_t min, size_t max)
     startedThreadCount++;
     std::cerr << "Parsing tweet range: [" << min << ", " << max << "]. Task #" << startedThreadCount << std::endl;
 
-    tl::Process p("/bin/sh", {cwd + SCRIPT_PATH});
+    tl::Process p("/bin/sh", {Configuration::instance()->tokenizer()});
 
     std::stringstream& in = p.stdin();
 
