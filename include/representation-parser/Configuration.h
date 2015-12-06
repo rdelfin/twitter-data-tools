@@ -19,6 +19,9 @@ public:
     std::string tokenizer();
     std::string output();
 
+    size_t threads();
+    size_t taskSize();
+
     static Configuration* instance();
 private:
     json data;

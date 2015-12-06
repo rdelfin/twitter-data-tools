@@ -4,7 +4,6 @@
 
 #include "representation-parser/Configuration.h"
 
-
 #include <fstream>
 #include <unistd.h>
 
@@ -15,12 +14,12 @@ Configuration::Configuration()
 }
 
 Configuration::Configuration(std::string file) {
-    std::ifstream configFile(file);
-    configFile >> data;
-
     char buffer[1024];
     getcwd(buffer, sizeof(buffer));
     cwd = std::string(buffer);
+
+    std::ifstream configFile(joinPath(file));
+    configFile >> data;
 }
 
 std::string Configuration::dataFile() {
@@ -33,6 +32,14 @@ std::string Configuration::output() {
 
 std::string Configuration::tokenizer() {
     return joinPath(data["tokenizer"]);
+}
+
+size_t Configuration::threads() {
+    return data["threads"];
+}
+
+size_t Configuration::taskSize() {
+    return data["task_size"];
 }
 
 Configuration* Configuration::instance() {
