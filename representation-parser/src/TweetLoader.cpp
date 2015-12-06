@@ -49,10 +49,12 @@ std::vector<Tweet> TweetLoader::parse() {
 
     startedThreadCount = completedThreadCount = 0;
 
-    for(size_t i = 0; i < tweetStrings.size(); i += TASK_SIZE) {
+    size_t taskSize = Configuration::instance()->taskSize();
+
+    for(size_t i = 0; i < tweetStrings.size(); i += taskSize) {
         Pair task;
         task.min = i;
-        task.max = i + TASK_SIZE - 1;
+        task.max = i + taskSize - 1;
         tasks.push_back(task);
         std::cerr << "TASK: [" << task.min << ", " << task.max << "]" << std::endl;
     }
@@ -67,13 +69,15 @@ std::vector<Tweet> TweetLoader::parse() {
 void TweetLoader::threadScheduler() {
     std::unique_lock<std::mutex> threadListLock(threadListMutex);
 
+    size_t threadMax = Configuration::instance()->threads();
+
     while(tasks.size() != 0) {
 
-        while (threadList.size() >= NUM_TWEET_LOADER_THREADS) {
+        while (threadList.size() >= threadMax) {
             threadListCV.wait(threadListLock);
         }
 
-        while (threadList.size() < NUM_TWEET_LOADER_THREADS) {
+        while (threadList.size() < threadMax) {
             Pair lastTask = tasks[tasks.size() - 1];
             tasks.pop_back();
             ThreadTask *newTask = new ThreadTask;

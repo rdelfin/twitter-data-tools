@@ -13,9 +13,6 @@
 
 #include "tools-lib/csv.h"
 
-#define NUM_TWEET_LOADER_THREADS 20
-#define TASK_SIZE 500
-
 class Dictionary;
 class Tweet;
 
