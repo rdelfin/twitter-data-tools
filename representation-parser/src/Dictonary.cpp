@@ -9,16 +9,15 @@
 
 #include <iostream>
 
-void deleteEntry(DictionaryEntry* entry) { delete entry; }
+//void deleteEntry(DictionaryEntry* entry) { delete entry; }
 
 Dictionary::Dictionary() {
 
 }
 
 void Dictionary::insertRegex(std::string pattern, std::string name) {
-    DictionaryEntry *entry = new DictionaryEntry(pattern, name);
-    entries.push_back(entry);
-    regexEntries.push_back(entry);
+    entries.push_back(new DictionaryEntry(pattern, name));
+    regexEntries.push_back(entries[entries.size() - 1]);
 }
 
 DictionaryEntry* Dictionary::getEntry(std::string term) {
@@ -35,16 +34,25 @@ DictionaryEntry* Dictionary::getEntry(std::string term) {
     }
     // If it is found in neither, add the term to the vector of entries and add the index to the map.
     else {
-        DictionaryEntry *result = new DictionaryEntry(term);
-        entries.push_back(result);
+        entries.push_back(new DictionaryEntry(term));
         idxMap.insert({{term, entries.size() - 1}});
-        return result;
+        return entries[entries.size() - 1];
     }
 }
 
 const DictionaryEntry* Dictionary::entryAt(size_t i) const
 {
     return i >= dictionarySize() ? nullptr : entries[i];
+}
+
+int64_t Dictionary::getIndex(DictionaryEntry* entry) const {
+    for(size_t i = 0; i < entries.size(); i++) {
+        if(entries[i] == entry) {
+            return i;
+        }
+    }
+
+    return -1;
 }
 
 size_t Dictionary::dictionarySize() const {
@@ -63,5 +71,5 @@ DictionaryEntry* Dictionary::foundRegex(std::string term)
 }
 
 Dictionary::~Dictionary() {
-    std::for_each(entries.begin(), entries.end(), deleteEntry);
+    //std::for_each(entries.begin(), entries.end(), deleteEntry);
 }

@@ -16,6 +16,9 @@ public:
     Tweet();
     Tweet(std::string tokenizedTweet, Dictionary*);
 
+    size_t size();
+    DictionaryEntry* operator[](size_t idx);
+
     ~Tweet();
 private:
     std::vector<DictionaryEntry *> tokens;

@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/OutputGenerator.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/representation-parser/OutputGenerator.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/Configuration.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/DictionaryEntry.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/Dictonary.cpp" isTestSource="false" />
@@ -36,6 +38,9 @@
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/sanitizer" />
           <root url="file:///usr/local/include" />
         </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/include/representation-parser/OutputGenerator.h" />
+        </excluded>
       </library>
     </orderEntry>
   </component>

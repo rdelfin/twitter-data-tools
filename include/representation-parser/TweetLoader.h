@@ -61,13 +61,15 @@ private:
     Dictionary* dictionary;
     std::vector<Tweet> tweetList;
 
-    std::string cwd;
-
     std::mutex tweetMutex;
+
+    std::mutex printMutex;
 
     std::mutex threadListMutex;
     std::condition_variable threadListCV;
     unsigned startedThreadCount, completedThreadCount;
+
+    void printlnAtomic(std::string);
 };
 
 

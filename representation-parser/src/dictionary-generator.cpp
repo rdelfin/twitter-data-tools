@@ -10,6 +10,7 @@
 #include <representation-parser/Tweet.h>
 #include <representation-parser/TweetLoader.h>
 #include <representation-parser/Configuration.h>
+#include <representation-parser/OutputGenerator.h>
 
 inline unsigned num_len(unsigned n);
 inline void remove_from_stdout(unsigned chars);
@@ -31,7 +32,7 @@ int main(int argc, char* argv[]) {
 
     TweetLoader tl(Configuration::instance()->dataFile(), &dict);
     tl.load();
-    tl.parse();
+    std::vector<Tweet> list = tl.parse();
 
     std::cout << "Unique terms:" << std::endl << std::endl;
 
@@ -41,6 +42,10 @@ int main(int argc, char* argv[]) {
 
     std::cout << "----------------------------" << std::endl;
     std::cout << "Number of unique terms in dictionary: " << dict.dictionarySize() << std::endl;
+    std::cout << "Writting out to output files..." << std::endl;
+
+    OutputGenerator output(list, &dict);
+    output.writeOut();
 
     std::cout << "Done!" << std::endl;
 }

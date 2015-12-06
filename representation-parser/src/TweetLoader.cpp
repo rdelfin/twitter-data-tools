@@ -21,11 +21,7 @@ TweetLoader::~TweetLoader() {
 TweetLoader::TweetLoader(std::string data_file, Dictionary* dictionary)
     : dictionary(dictionary)
 {
-    char cwd_buffer[512];
-    getcwd(cwd_buffer, sizeof(cwd_buffer));
-    cwd = std::string(cwd_buffer);
-
-    reader = new io::CSVReader<6, io::trim_chars<' ', '\t'>, io::double_quote_escape<',', '"'>>((cwd + data_file).c_str());
+    reader = new io::CSVReader<6, io::trim_chars<' ', '\t'>, io::double_quote_escape<',', '"'>>(data_file.c_str());
 }
 
 void TweetLoader::load() {
@@ -38,12 +34,12 @@ void TweetLoader::load() {
 
 std::vector<Tweet> TweetLoader::parse() {
     if(threadList.size() != 0) {
-        std::cerr << "Error: Thread list is not empty. Wait for the computation to finish." << std::endl;
+        printlnAtomic("Error: Thread list is not empty. Wait for the computation to finish.");
         throw tasks_running_exception();
     }
 
     if(tasks.size() != 0) {
-        std::cerr << "Error: Task list is not empty. Wait for the computation to finish." << std::endl;
+        printlnAtomic("Error: Task list is not empty. Wait for the computation to finish.");
         throw tasks_running_exception();
     }
 
@@ -56,10 +52,16 @@ std::vector<Tweet> TweetLoader::parse() {
         task.min = i;
         task.max = i + taskSize - 1;
         tasks.push_back(task);
-        std::cerr << "TASK: [" << task.min << ", " << task.max << "]" << std::endl;
+
+        std::stringstream stream;
+        stream << "TASK: [" << task.min << ", " << task.max + "]";
+        printlnAtomic(stream.str());
     }
 
-    std::cerr << "CREATED A TOTAL OF " << tasks.size() << " TASKS" << std::endl << std::endl;
+
+    std::stringstream stream;
+    stream << "CREATED A TOTAL OF " << tasks.size() << " TASKS" << std::endl;
+    printlnAtomic(stream.str());
 
     threadScheduler();
 
@@ -71,17 +73,21 @@ void TweetLoader::threadScheduler() {
 
     size_t threadMax = Configuration::instance()->threads();
 
-    while(tasks.size() != 0) {
+    while(tasks.size() > 0) {
 
         while (threadList.size() >= threadMax) {
             threadListCV.wait(threadListLock);
         }
 
-        while (threadList.size() < threadMax) {
+        while (threadList.size() < threadMax && tasks.size() > 0) {
             Pair lastTask = tasks[tasks.size() - 1];
             tasks.pop_back();
             ThreadTask *newTask = new ThreadTask;
             newTask->pair = lastTask;
+
+            std::stringstream stream;
+            stream << "Scheduling task [" << lastTask.min << ", " << lastTask.max << "]. Tasks left: " << tasks.size();
+            printlnAtomic(stream.str());
             newTask->thread = std::thread(&TweetLoader::parseRange, this, lastTask.min, lastTask.max);
             threadList.push_back(newTask);
             threadList[threadList.size() - 1]->thread.detach();
@@ -99,7 +105,9 @@ void TweetLoader::threadScheduler() {
 void TweetLoader::parseRange(size_t min, size_t max)
 {
     startedThreadCount++;
-    std::cerr << "Parsing tweet range: [" << min << ", " << max << "]. Task #" << startedThreadCount << std::endl;
+    std::stringstream stream;
+    stream << "Parsing tweet range: [" << min << ", " << max << "]. Task #" << startedThreadCount;
+    printlnAtomic(stream.str());
 
     tl::Process p("/bin/sh", {Configuration::instance()->tokenizer()});
 
@@ -117,7 +125,7 @@ void TweetLoader::parseRange(size_t min, size_t max)
     std::stringstream& out = p.stdout();
 
 
-    std::cerr << "Adding tweets" << std::endl;
+    printlnAtomic("Adding tweets");
 
     std::unique_lock<std::mutex> tweetLock(tweetMutex);
 
@@ -147,9 +155,20 @@ void TweetLoader::parseRange(size_t min, size_t max)
     threadListCV.notify_one();
 
     completedThreadCount++;
-    std::cerr << "Completed thread with tweet range: [" << min << ", " << max << "]. Threads completed: " << completedThreadCount << std::endl;
+
+    std::stringstream stream2;
+    stream2 << "Completed thread with tweet range: [" << min << ", " << max << "]. Threads completed: " << completedThreadCount;
+    printlnAtomic(stream2.str());
+
+    threadListLock.unlock();
 }
 
+void TweetLoader::printlnAtomic(std::string str)
+{
+    std::unique_lock<std::mutex> printLock(printMutex);
+    std::cerr << str << std::endl;
+    printLock.unlock();
+}
 
 TweetLoader::TweetLoader() {
 

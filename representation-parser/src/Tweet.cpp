@@ -21,6 +21,18 @@ Tweet::Tweet(std::string tokenizedTweet, Dictionary* dictionary)
     }
 }
 
+
+size_t Tweet::size() {
+    return tokens.size();
+}
+
+DictionaryEntry* Tweet::operator[](size_t idx) {
+    if(idx >= tokens.size())
+        return nullptr;
+
+    return tokens[idx];
+}
+
 Tweet::~Tweet()
 {
 

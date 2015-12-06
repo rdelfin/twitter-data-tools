@@ -19,6 +19,7 @@ public:
     DictionaryEntry* getEntry(std::string);
 
     const DictionaryEntry* entryAt(size_t i) const;
+    int64_t getIndex(DictionaryEntry*) const;
 
     size_t dictionarySize() const;
 
