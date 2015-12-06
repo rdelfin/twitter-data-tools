@@ -10,6 +10,7 @@
 #include <tools-lib/Process.h>
 #include <representation-parser/TweetLoader.h>
 #include <representation-parser/Configuration.h>
+#include <sys/stat.h>
 #include "representation-parser/Dictionary.h"
 #include "representation-parser/Tweet.h"
 
@@ -58,6 +59,8 @@ std::vector<Tweet> TweetLoader::parse() {
         printlnAtomic(stream.str());
     }
 
+    totalTasks = tasks.size();
+
 
     std::stringstream stream;
     stream << "CREATED A TOTAL OF " << tasks.size() << " TASKS" << std::endl;
@@ -69,6 +72,9 @@ std::vector<Tweet> TweetLoader::parse() {
 }
 
 void TweetLoader::threadScheduler() {
+    /* Directory used by tasks to store twitter data */
+    mkdir("temp", 0777);
+
     std::unique_lock<std::mutex> threadListLock(threadListMutex);
 
     size_t threadMax = Configuration::instance()->threads();
@@ -98,6 +104,8 @@ void TweetLoader::threadScheduler() {
     while (threadList.size() != 0)
         threadListCV.wait(threadListLock);
 
+    rmdir("temp");
+
     threadListLock.unlock();
 }
 
@@ -105,29 +113,36 @@ void TweetLoader::threadScheduler() {
 void TweetLoader::parseRange(size_t min, size_t max)
 {
     startedThreadCount++;
-    std::stringstream stream;
-    stream << "Parsing tweet range: [" << min << ", " << max << "]. Task #" << startedThreadCount;
-    printlnAtomic(stream.str());
 
-    tl::Process p("/bin/sh", {Configuration::instance()->tokenizer()});
-
-    std::stringstream& in = p.stdin();
+    std::stringstream data;
 
     for(size_t i = min; i <= std::min(max, tweetStrings.size() - 1); i++) {
-        in << tweetStrings[i] << std::endl;
+        data << tweetStrings[i] << std::endl;
     }
+
+    std::stringstream fname;
+    fname << "temp/" << min << "_" << max << ".txt";
+    std::ofstream tempData(fname.str(), std::ofstream::out | std::ofstream::trunc);
+
+    tempData << data.str();
+    tempData.close();
+
+    tl::Process p("/bin/sh", {Configuration::instance()->tokenizer(), fname.str()});
 
     // Start the program and wait (no input).
     p.start();
     p.wait();
 
+    unlink(fname.str().c_str());
+
     // Get the output and parse data
     std::stringstream& out = p.stdout();
 
-
-    printlnAtomic("Adding tweets");
-
     std::unique_lock<std::mutex> tweetLock(tweetMutex);
+
+    std::stringstream addTweetsStream;
+    addTweetsStream << "Adding tweets with tweet range: [" << min << ", " << max << "]";
+    printlnAtomic(addTweetsStream.str());
 
     std::string line;
     size_t tweetidx = 0;
@@ -157,7 +172,8 @@ void TweetLoader::parseRange(size_t min, size_t max)
     completedThreadCount++;
 
     std::stringstream stream2;
-    stream2 << "Completed thread with tweet range: [" << min << ", " << max << "]. Threads completed: " << completedThreadCount;
+    stream2 << "Completed thread with tweet range: [" << min << ", " << max << "]. Threads completed: "
+            << completedThreadCount << "/" << totalTasks;
     printlnAtomic(stream2.str());
 
     threadListLock.unlock();

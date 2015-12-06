@@ -67,7 +67,7 @@ private:
 
     std::mutex threadListMutex;
     std::condition_variable threadListCV;
-    unsigned startedThreadCount, completedThreadCount;
+    unsigned long startedThreadCount, completedThreadCount, totalTasks;
 
     void printlnAtomic(std::string);
 };
