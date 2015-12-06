@@ -54,7 +54,7 @@ std::vector<Tweet> TweetLoader::parse() {
         tasks.push_back(task);
 
         std::stringstream stream;
-        stream << "TASK: [" << task.min << ", " << task.max + "]";
+        stream << "TASK: [" << task.min << ", " << task.max << "]";
         printlnAtomic(stream.str());
     }
 

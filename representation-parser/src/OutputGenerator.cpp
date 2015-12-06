@@ -5,6 +5,7 @@
 #include "representation-parser/OutputGenerator.h"
 
 #include <representation-parser/Dictionary.h>
+#include <representation-parser/DictionaryEntry.h>
 #include <representation-parser/Tweet.h>
 #include <representation-parser/Configuration.h>
 
@@ -43,14 +44,14 @@ void OutputGenerator::writeOut() {
 
 void OutputGenerator::writeDictionary() {
     for(size_t i = 0; i < dictionary->dictionarySize(); i++) {
-        dictionaryFile << dictionary->entryAt(i) << std::endl;
+        dictionaryFile << dictionary->entryAt(i)->getName() << std::endl;
     }
 }
 
 void OutputGenerator::writeTweets() {
     for (size_t i = 0; i < tweets.size(); i++) {
-        for(size_t j = 0; j < tweets[i].size(); i++) {
-            tweetsFile << dictionary->getIndex(tweets[i][j]);
+        for(size_t j = 0; j < tweets[i].size(); j++) {
+            tweetsFile << tweets[i][j]->getIdx();
             if(j < tweets[i].size() - 1) {
                 tweetsFile << ",";
             }

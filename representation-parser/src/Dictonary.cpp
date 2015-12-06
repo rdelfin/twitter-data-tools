@@ -16,7 +16,7 @@ Dictionary::Dictionary() {
 }
 
 void Dictionary::insertRegex(std::string pattern, std::string name) {
-    entries.push_back(new DictionaryEntry(pattern, name));
+    entries.push_back(new DictionaryEntry(pattern, name, entries.size()));
     regexEntries.push_back(entries[entries.size() - 1]);
 }
 
@@ -34,7 +34,7 @@ DictionaryEntry* Dictionary::getEntry(std::string term) {
     }
     // If it is found in neither, add the term to the vector of entries and add the index to the map.
     else {
-        entries.push_back(new DictionaryEntry(term));
+        entries.push_back(new DictionaryEntry(term, entries.size()));
         idxMap.insert({{term, entries.size() - 1}});
         return entries[entries.size() - 1];
     }

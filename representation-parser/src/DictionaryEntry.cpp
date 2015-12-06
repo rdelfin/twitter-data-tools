@@ -8,11 +8,11 @@
 
 DictionaryEntry::DictionaryEntry() { }
 
-DictionaryEntry::DictionaryEntry(std::string term)
-    : pattern(term), isRegex(false), name(term) { }
+DictionaryEntry::DictionaryEntry(std::string term, size_t idx)
+    : pattern(term), isRegex(false), name(term), idx(idx) { }
 
-DictionaryEntry::DictionaryEntry(std::string pattern, std::string name)
-    : pattern(pattern), isRegex(true), name(name) { }
+DictionaryEntry::DictionaryEntry(std::string pattern, std::string name, size_t idx)
+    : pattern(pattern), isRegex(true), name(name), idx(idx) { }
 
 
 bool DictionaryEntry::isEntry(std::string s) {

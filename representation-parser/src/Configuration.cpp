@@ -35,11 +35,11 @@ std::string Configuration::tokenizer() {
 }
 
 size_t Configuration::threads() {
-    return data["threads"];
+    return data["threads"]["max"];
 }
 
 size_t Configuration::taskSize() {
-    return data["task_size"];
+    return data["threads"]["task_size"];
 }
 
 Configuration* Configuration::instance() {

@@ -11,8 +11,8 @@ class DictionaryEntry
 {
 public:
     DictionaryEntry();
-    DictionaryEntry(std::string term);
-    DictionaryEntry(std::string pattern, std::string name);
+    DictionaryEntry(std::string term, size_t idx);
+    DictionaryEntry(std::string pattern,  std::string name, size_t idx);
 
     bool isEntry(std::string);
 
@@ -22,13 +22,14 @@ public:
 
     const std::string& getName() const { return name; }
     bool getIsRegex() const { return isRegex; }
-
+    size_t getIdx() const { return idx; }
 
     ~DictionaryEntry();
 private:
     std::string pattern;
     std::string name;
     bool isRegex;
+    size_t idx;
 };
 
 bool inline operator==(const std::string& term, DictionaryEntry& entry) {  return entry == term; }
