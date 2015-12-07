@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="twitter_data_tools" targetName="CopyConfig" />
+      <config projectName="twitter_data_tools" targetName="data-tagger" />
+      <config projectName="twitter_data_tools" targetName="dictionary" />
+      <config projectName="twitter_data_tools" targetName="twitter_data_tools" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true" GENERATION_PASS_SYSTEM_ENVIRONMENT="true">
+    <ADDITIONAL_GENERATION_ENVIRONMENT>
+      <envs />
+    </ADDITIONAL_GENERATION_ENVIRONMENT>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c199258-a689-4d3f-9873-720efd000f9b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h" afterPath="$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/Configuration.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/Configuration.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/OutputGenerator.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/OutputGenerator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp" afterPath="$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp" />
+    </list>
+    <ignored path="twitter-data-tools.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="twitter-data-tools" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="OutputGenerator.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/representation-parser/OutputGenerator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              <folding>
+                <element signature="e#132#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputGenerator.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/OutputGenerator.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+              <folding>
+                <element signature="e#41#91#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6666667">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/Configuration.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tweet.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/Tweet.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetLoader.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/representation-parser/TweetLoader.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetLoader.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.010344828">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="16" />
+              <folding>
+                <element signature="e#42#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dictonary.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/data-tagger/src/tagger.cpp" />
+        <option value="$PROJECT_DIR$/include/data-tagger/CsvRecord.h" />
+        <option value="$PROJECT_DIR$/include/data-tagger/CsvReader.h" />
+        <option value="$PROJECT_DIR$/data-tagger/src/CsvReader.cpp" />
+        <option value="$PROJECT_DIR$/data-tagger/src/CsvRecord.cpp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/include/tools-lib/Process.h" />
+        <option value="$PROJECT_DIR$/representation-parser/src/DictonaryEntry.cpp" />
+        <option value="$PROJECT_DIR$/include/representation-parser/DictonaryEntry.h" />
+        <option value="$PROJECT_DIR$/include/representation-parser/Dictonary.h" />
+        <option value="$PROJECT_DIR$/tools-lib/src/StringUtils.cpp" />
+        <option value="$PROJECT_DIR$/include/tools-lib/StringUtils.h" />
+        <option value="$PROJECT_DIR$/TweetLoader.h" />
+        <option value="$PROJECT_DIR$/TweetLoader.cpp" />
+        <option value="$PROJECT_DIR$/tools-lib/src/Process.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/representation-parser/Configuration.h" />
+        <option value="$PROJECT_DIR$/include/representation-parser/Tweet.h" />
+        <option value="$PROJECT_DIR$/representation-parser/src/Tweet.cpp" />
+        <option value="$PROJECT_DIR$/include/representation-parser/Dictionary.h" />
+        <option value="$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp" />
+        <option value="$PROJECT_DIR$/include/representation-parser/OutputGenerator.h" />
+        <option value="$PROJECT_DIR$/include/representation-parser/TweetLoader.h" />
+        <option value="$PROJECT_DIR$/config/config.json" />
+        <option value="$PROJECT_DIR$/representation-parser/src/Configuration.cpp" />
+        <option value="$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp" />
+        <option value="$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp" />
+        <option value="$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h" />
+        <option value="$PROJECT_DIR$/representation-parser/src/OutputGenerator.cpp" />
+        <option value="$PROJECT_DIR$/representation-parser/src/Dictonary.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="2095" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="representation-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="representation-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-data-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="SearchEverywhereHistoryKey" value="Process&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/tools-lib/src/Process.cpp&#10;DictionaryE&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/representation-parser/DictionaryEntry.h&#10;CsvRe&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h&#10;csv&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h&#10;CSV&#9;FILE&#9;file:///home/rdelfin/Documents/twitter-data-tools/include/data-tagger/CsvReader.h" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include/representation-parser" />
+      <recent name="$PROJECT_DIR$/representation-parser/src" />
+      <recent name="$PROJECT_DIR$/include/tools-lib" />
+      <recent name="$PROJECT_DIR$/tools-lib/src" />
+      <recent name="$PROJECT_DIR$/include/data-tagger" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include/json" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/include/tools-lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="twitter_data_tools" TARGET_NAME="twitter_data_tools" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="twitter_data_tools" TARGET_NAME="twitter_data_tools" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="twitter_data_tools" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="twitter_data_tools" TARGET_NAME="twitter_data_tools" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="twitter_data_tools" RUN_TARGET_NAME="twitter_data_tools">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="data-tagger" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="twitter_data_tools" TARGET_NAME="data-tagger" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="twitter_data_tools" RUN_TARGET_NAME="data-tagger">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="dictionary" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="twitter_data_tools" TARGET_NAME="dictionary" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="twitter_data_tools" RUN_TARGET_NAME="dictionary">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="twitter_data_tools" RUN_TARGET_NAME="dictionary" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CopyConfig" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="twitter_data_tools" TARGET_NAME="CopyConfig" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.twitter_data_tools" />
+      <item index="1" class="java.lang.String" itemvalue="Application.data-tagger" />
+      <item index="2" class="java.lang.String" itemvalue="Application.dictionary" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CopyConfig" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c199258-a689-4d3f-9873-720efd000f9b" name="Default" comment="" />
+      <created>1448169005780</created>
+      <option name="number" value="Default" />
+      <updated>1448169005780</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added gitignore">
+      <created>1448175097952</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1448175097952</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added cmakelists.txt">
+      <created>1448175154054</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1448175154054</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created CSVRecord and Reader classes (not yet implemented or fully decleared)">
+      <created>1448175328781</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1448175328781</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Corrected cmakelists.txt and added clion data.">
+      <created>1448381080902</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1448381080903</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added copy functionality to cmakelists.">
+      <created>1448487098096</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1448487098102</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Dictionary to facilitate adding Tweets and breaking them down into tokens. This includes:&#10;- Dictionary: Class stores a list of DictionaryEntry's as well and facilitates adding new Entry's&#10;- DictionaryEntry: A term in the dictionary. Can be expressed either as a regex or a literal string.&#10;- StringUtils: Class with static functions used for string utilities. Currently only trim.">
+      <created>1448771234689</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1448771234689</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created test of Dictionary. First test resulted in 2756 terms. This will end up being an... Interesting problem.">
+      <created>1448773737247</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1448773737247</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added code to display all terms and group user handles and URL's into a single category.">
+      <created>1448845780083</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1448845780083</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created TweetLoader, that can load in TwitterData from a CSV file with a preset format and store into a large vector. Currently only does that. In the future, it will also make use of the twokenizer sh script to convert into tokens.">
+      <created>1448865999065</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1448865999065</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added a maximum number of processing threads that can run at a given time, to avoid overloading the system in forks but to still be able to split up the task into small (600 tweet-long) subtasks.">
+      <created>1449178212721</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1449178212721</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implemented a faster HashMap implementation for the dictionary to allow for faster insertion and lookup">
+      <created>1449357543160</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1449357543160</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added a configuration file with an open source json readers. Defaults to reading to config/config.json. Implemented as a singleton pattern to facilitate global usage.">
+      <created>1449359205293</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1449359205293</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed configuration class.">
+      <created>1449359451608</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1449359451608</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Removed all string literals that can be transfered to the config.json file.">
+      <created>1449359634434</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1449359634434</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed CWD error in configuration class.">
+      <created>1449360042656</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1449360042656</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added task size and max threads to tweet loader.">
+      <created>1449360186436</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1449360186436</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added output generator to create output to file.">
+      <created>1449367248199</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1449367248199</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="24" width="2095" height="1416" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249642" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.49832934" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.50167066" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added gitignore" />
+    <MESSAGE value="Added cmakelists.txt" />
+    <MESSAGE value="Created CSVRecord and Reader classes (not yet implemented or fully decleared)" />
+    <MESSAGE value="Corrected cmakelists.txt and added clion data." />
+    <MESSAGE value="Added copy functionality to cmakelists." />
+    <MESSAGE value="Created Process class to handle process execution and creation in a C++ like way." />
+    <MESSAGE value="Created Process class to handle process execution and creation in a C++ like way. Not yet tested." />
+    <MESSAGE value="Fixed bug in Process where process would not end because redirection had not yet been read. Could be an issue with the Java executable (since any other script works without issues). Now reading script without issues." />
+    <MESSAGE value="Added Dictionary to facilitate adding Tweets and breaking them down into tokens. This includes:&#10;- Dictionary: Class stores a list of DictionaryEntry's as well and facilitates adding new Entry's&#10;- DictionaryEntry: A term in the dictionary. Can be expressed either as a regex or a literal string.&#10;- StringUtils: Class with static functions used for string utilities. Currently only trim." />
+    <MESSAGE value="Created test of Dictionary. First test resulted in 2756 terms. This will end up being an... Interesting problem." />
+    <MESSAGE value="Added code to display all terms and group user handles and URL's into a single category." />
+    <MESSAGE value="Created TweetLoader, that can load in TwitterData from a CSV file with a preset format and store into a large vector. Currently only does that. In the future, it will also make use of the twokenizer sh script to convert into tokens." />
+    <MESSAGE value="Added a maximum number of processing threads that can run at a given time, to avoid overloading the system in forks but to still be able to split up the task into small (600 tweet-long) subtasks." />
+    <MESSAGE value="Implemented a faster HashMap implementation for the dictionary to allow for faster insertion and lookup" />
+    <MESSAGE value="Added a configuration file with an open source json readers. Defaults to reading to config/config.json. Implemented as a singleton pattern to facilitate global usage." />
+    <MESSAGE value="Fixed configuration class." />
+    <MESSAGE value="Removed all string literals that can be transfered to the config.json file." />
+    <MESSAGE value="Added task size and number of threads to configuration file." />
+    <MESSAGE value="Fixed CWD error in configuration class." />
+    <MESSAGE value="Added task size and max threads to tweet loader." />
+    <MESSAGE value="Added output generator to create output to file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added output generator to create output to file." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/armadillo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/armadillo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/armadillo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/armadillo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/armadillo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/armadillo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ark-tweet-nlp-0.3.2/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33307928">
+          <caret line="305" column="13" selection-start-line="305" selection-start-column="13" selection-end-line="305" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ark-tweet-nlp-0.3.2/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23323171">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/tools-lib/Process.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49390244">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/tools-lib/StringUtils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.8/bits/regex_compiler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="973" column="0" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/twitter-data/tweets-text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/twitter-data/testdata.manual.2009.06.14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="171" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82988507">
+          <caret line="397" column="39" selection-start-line="397" selection-start-column="38" selection-end-line="397" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/tools-lib/csv.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="914" column="23" selection-start-line="914" selection-start-column="14" selection-end-line="914" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools-lib/src/StringUtils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.9/mutex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.9/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7724138">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/json/json.hpp.re2c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/Configuration.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5586207">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/Tweet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2195122">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.9/bits/regex.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="514" column="0" selection-start-line="514" selection-start-column="0" selection-end-line="514" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/Dictionary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools-lib/src/Process.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/dictionary-generator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.935484">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/OutputGenerator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="e#132#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/json/json.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7195" column="0" selection-start-line="7195" selection-start-column="0" selection-end-line="7195" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/Configuration.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6666667">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/DictionaryEntry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53608245">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/DictionaryEntry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20876288">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/OutputGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+          <folding>
+            <element signature="e#41#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.9/functional">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33247423">
+          <caret line="568" column="0" selection-start-line="568" selection-start-column="0" selection-end-line="568" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/Tweet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/representation-parser/TweetLoader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/Dictonary.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/representation-parser/src/TweetLoader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.010344828">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="e#42#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
