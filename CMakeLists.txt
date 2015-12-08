@@ -7,26 +7,36 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 find_package(Armadillo REQUIRED)
 find_package (Threads REQUIRED)
 
-set(link-dirs ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+set(LINK-DIRS ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 # Include directories. Should contain the include folder, as well as libraries
 include_directories(include
                     ${ARMADILLO_INCLUDE_DIRS}
                     ${Jsoncpp_INCLUDE_DIR})
 
+set(NEURAL-NETWORK_SRC neural-network/src/NeuralNetwork.cpp)
 set(REPRESENTATION-PARSER_SRC representation-parser/src/dictionary-generator.cpp
-        representation-parser/src/Tweet.cpp
-        representation-parser/src/Dictonary.cpp
-        representation-parser/src/DictionaryEntry.cpp
-        representation-parser/src/TweetLoader.cpp
-        representation-parser/src/Configuration.cpp representation-parser/src/OutputGenerator.cpp include/representation-parser/OutputGenerator.h)
+                              representation-parser/src/Tweet.cpp
+                              representation-parser/src/Dictonary.cpp
+                              representation-parser/src/DictionaryEntry.cpp
+                              representation-parser/src/TweetLoader.cpp
+                              representation-parser/src/Configuration.cpp
+                              representation-parser/src/OutputGenerator.cpp)
 set(TOOLS-LIB_SRC tools-lib/src/Process.cpp
                   tools-lib/src/StringUtils.cpp)
+set(NN-PARSER_SRC nn-parser/src/main.cpp)
 
-# Executable and linking
+# Dictionary executable and linking
 add_executable(dictionary ${REPRESENTATION-PARSER_SRC} ${TOOLS-LIB_SRC})
+target_link_libraries(dictionary ${LINK-DIRS})
 
-target_link_libraries(dictionary ${link-dirs})
+# Neural network representation executable and linking
+message("NEURAL NETWORK SRC: ${NERUAL-NETWORK_SRC}")
+message("NN PARSER SRC: ${NN-PARSER_SRC}")
+message("TOOLS LIB SRC: ${TOOLS-LIB_SRC}")
+add_executable(nn-representation ${NEURAL-NETWORK_SRC} ${TOOLS-LIB_SRC} ${NN-PARSER_SRC})
+target_link_libraries(nn-representation ${LINK-DIRS})
+
 
 # Copy configuration files
 add_custom_target(CopyConfig ${CMAKE_COMMAND} -E copy_directory
