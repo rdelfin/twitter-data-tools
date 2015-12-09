@@ -3,7 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/neural-network/src/NeuralNetwork.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/neural-network/src/WordNeuralNetwork.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/nn-parser/src/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/Configuration.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/representation-parser/src/DictionaryEntry.cpp" isTestSource="false" />

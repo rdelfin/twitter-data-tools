@@ -14,7 +14,7 @@ include_directories(include
                     ${ARMADILLO_INCLUDE_DIRS}
                     ${Jsoncpp_INCLUDE_DIR})
 
-set(NEURAL-NETWORK_SRC neural-network/src/NeuralNetwork.cpp)
+set(NEURAL-NETWORK_SRC neural-network/src/WordNeuralNetwork.cpp)
 set(REPRESENTATION-PARSER_SRC representation-parser/src/dictionary-generator.cpp
                               representation-parser/src/Tweet.cpp
                               representation-parser/src/Dictonary.cpp
