@@ -2,20 +2,31 @@
 // Created by rdelfin on 12/7/15.
 //
 
+
 #include <neural-network/WordNeuralNetwork.h>
 
-#include <armadillo>
+#include <Eigen/Dense>
 #include <functional>
+#include <cmath>
+
+double recp(double x) {
+    return 1.0 / x;
+}
 
 int main(int argc, char* argv[]) {
-    WordNeuralNetwork network(5, 3, 1, [](const arma::mat& in)-> arma::mat{
-        return 1.0 / (1.0 + arma::exp(-1.0 * in));
+    WordNeuralNetwork network(5, 3, 1, [](const Eigen::MatrixXd& in)-> Eigen::MatrixXd {
+        Eigen::MatrixXd exponent = (-1.0 * in).unaryExpr(std::ptr_fun(exp));
+        Eigen::MatrixXd ones = Eigen::MatrixXd::Constant(in.rows(), in.cols(), 1.0);
+        return (ones + exponent).unaryExpr(std::ptr_fun(recp));
     });
 
-    arma::mat in = arma::mat(4, 5, arma::fill::randn);
-    arma::mat out = network(in);
-    in.impl_print("in = ");
-    out.impl_print("NN(in) =");
+
+    Eigen::MatrixXd in = Eigen::MatrixXd::Random(4, 5);
+    Eigen::MatrixXd out = network(in);
+    std::cout << "in = " << std::endl
+              << in << std::endl
+              << "out = " << std::endl
+              << out << std::endl;
 
     return 0;
 }

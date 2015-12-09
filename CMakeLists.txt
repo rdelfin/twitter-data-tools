@@ -4,14 +4,12 @@ project(twitter_data_tools)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Requirements
-find_package(Armadillo REQUIRED)
 find_package (Threads REQUIRED)
 
-set(LINK-DIRS ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+set(LINK-DIRS ${CMAKE_THREAD_LIBS_INIT})
 
 # Include directories. Should contain the include folder, as well as libraries
 include_directories(include
-                    ${ARMADILLO_INCLUDE_DIRS}
                     ${Jsoncpp_INCLUDE_DIR})
 
 set(NEURAL-NETWORK_SRC neural-network/src/WordNeuralNetwork.cpp)

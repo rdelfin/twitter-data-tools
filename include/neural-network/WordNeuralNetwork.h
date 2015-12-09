@@ -5,19 +5,19 @@
 #ifndef TWITTER_DATA_TOOLS_WORDNEURALNETWORK_H
 #define TWITTER_DATA_TOOLS_WORDNEURALNETWORK_H
 
-#include <armadillo>
+#include <Eigen/Dense>
 #include <cppoptlib/meta.h>
 #include <cppoptlib/solver/gradientdescentsolver.h>
 #include <cppoptlib/problem.h>
 
-using ActivationFunction = std::function<arma::mat(const arma::mat &)>;
+using ActivationFunction = std::function<Eigen::MatrixXd(const Eigen::MatrixXd &)>;
 
 class WordNeuralNetwork : public cppoptlib::Problem<double> {
 public:
     WordNeuralNetwork(unsigned inputs, unsigned outputs, unsigned hidden, ActivationFunction func);
-    arma::mat operator()(const arma::mat& in);
+    Eigen::MatrixXd operator()(const Eigen::MatrixXd& in);
 
-    void setX(const arma::mat &x);
+    void setX(const Eigen::MatrixXd &x);
 
     double value(const cppoptlib::Vector<double>& x);
 
@@ -26,10 +26,10 @@ public:
 
     virtual ~WordNeuralNetwork() { }
 private:
-    arma::mat theta1;
-    arma::mat theta2;
+    Eigen::MatrixXd theta1;
+    Eigen::MatrixXd theta2;
 
-    arma::mat x;
+    Eigen::MatrixXd x;
 
     unsigned inputN;
     unsigned hiddenN;
