@@ -3,31 +3,45 @@
 //
 
 #include "neural-network/WordNeuralNetwork.h"
+#include <algorithm>
 
-WordNeuralNetwork::WordNeuralNetwork(unsigned inputs, unsigned outputs, unsigned hidden, ActivationFunction func)
-        : activation(func), inputN(inputs), outputN(outputs), hiddenN(hidden),
-          theta1(Eigen::MatrixXd::Random(inputs + 1, hidden)), theta2(Eigen::MatrixXd::Random(hidden + 1, outputs)) {
+WordNeuralNetwork::WordNeuralNetwork(unsigned windowSize, unsigned embeddingSize, unsigned dictionarySize,
+                                     unsigned replacements, unsigned hidden, ActivationFunction func)
+        : activation(func), inputN(windowSize*embeddingSize), outputN(1), hiddenN(hidden), windowSize(windowSize),
+          replacements(replacements), embeddings(embeddingSize, dictionarySize + 1),
+          theta1(Eigen::MatrixXd::Random(windowSize*embeddingSize + 1, hidden)),
+          theta2(Eigen::MatrixXd::Random(hidden + 1, 1)), randWordDistribution(0, dictionarySize - 1) {
 
 }
 
-void WordNeuralNetwork::setX(const Eigen::MatrixXd &x) {
-    if(x.cols() != inputN) {
+void WordNeuralNetwork::setData(const Eigen::MatrixXd &phrases) {
+    if(phrases.cols() != windowSize) {
         throw DimensionsException();
     }
 
-    this->x = x;
+    this->phrases = phrases;
 }
 
-Eigen::MatrixXd WordNeuralNetwork::operator()(const Eigen::MatrixXd& in) {
-    if(in.cols() != inputN) {
-        throw DimensionsException();
+Eigen::MatrixXd WordNeuralNetwork::forward() {
+    return forward(phrases);
+}
+
+Eigen::MatrixXd WordNeuralNetwork::forward(const Eigen::MatrixXd &in) {
+    Eigen::MatrixXd embeddedInput(in.rows(), inputN);
+
+    /* Iterates over every word and creates a new vector where the word indexes are replaced with their vector
+     * embedding representations. */
+    for(int phrase = 0; phrase < in.rows(); phrase++) {
+        for(int word = 0; word < in.cols(); word++) {
+            for(int v = 0; v < embeddings.rows(); v++) {
+                embeddedInput(phrase, word*embeddings.rows() + v) = embeddings(v, (int)in(phrase, word));
+            }
+        }
     }
-
-
 
     Eigen::MatrixXd a1;
-    a1.resize(in.rows(), in.cols() + 1);
-    a1 << Eigen::MatrixXd::Constant(in.rows(), 1, 1), in;
+    a1.resize(embeddedInput.rows(), embeddedInput.cols() + 1);
+    a1 << Eigen::MatrixXd::Constant(embeddedInput.rows(), 1, 1), embeddedInput;
 
     Eigen::MatrixXd s2 = a1 * theta1;
     Eigen::MatrixXd tempA2 = activation(s2);
@@ -42,6 +56,71 @@ Eigen::MatrixXd WordNeuralNetwork::operator()(const Eigen::MatrixXd& in) {
 }
 
 double WordNeuralNetwork::value(const cppoptlib::Vector<double> &x) {
-    double num = x(5);
-    return -1;
+    setParameters(x);
+
+    Eigen::VectorXd result = forward();                   /* Sample size x 1 */
+    Eigen::MatrixXd replaced = stochasticReplaceMiddle(); /* Sample size x (windowSize * replacements) */
+    Eigen::MatrixXd replacedResult(replaced.rows(), replacements);
+
+    for (int i = 0; i < replacements; i++) {
+        Eigen::MatrixXd column = replaced.block(0, i * windowSize, replaced.rows() - 1, (i+1) * windowSize - 1);
+        column = forward(column);
+        replacedResult.block(0, i * windowSize, replaced.rows() - 1, (i+1) * windowSize - 1) = column;
+    }
+
+    Eigen::MatrixXd replicatedResult(replaced.rows(), replaced.cols());
+
+    for(int i = 0; i < replicatedResult.rows(); i++) {
+        for(int j = 0; j < replicatedResult.cols(); j++) {
+            replicatedResult(i, j) = result[i];
+        }
+    }
+
+    Eigen::MatrixXd scores = Eigen::MatrixXd::Constant(replaced.rows(), replaced.cols(), 1) - replicatedResult + replacedResult;
+
+    for(int i = 0; i < scores.rows(); i++) {
+        for(int j = 0; j < scores.cols(); j++) {
+            scores(i, j) = std::max(0.0, scores(i, j));
+        }
+    }
+
+    return scores.sum();
+}
+
+void WordNeuralNetwork::setParameters(const Eigen::VectorXd &parameters) {
+    long parametersIndex = 0;
+
+    /* Embeddings */
+    for(int i = 0; i < embeddings.rows(); i++) {
+        for(int j = 0; j < embeddings.cols(); j++) {
+            embeddings(i, j) = parameters[parametersIndex];
+            parametersIndex++;
+        }
+    }
+
+    /* Theta 1 */
+    for(int i = 0; i < theta1.rows(); i++) {
+        for(int j = 0; j < theta1.cols(); j++) {
+            theta1(i, j) = parameters[parametersIndex];
+            parametersIndex++;
+        }
+    }
+
+    /* Theta 2 */
+    for(int i = 0; i < theta2.rows(); i++) {
+        for(int j = 0; j < theta2.cols(); j++) {
+            theta2(i, j) = parameters[parametersIndex];
+            parametersIndex++;
+        }
+    }
+}
+
+Eigen::MatrixXd WordNeuralNetwork::stochasticReplaceMiddle() {
+    Eigen::MatrixXd data = phrases;
+
+    for(int i = 0; i < data.rows(); i++) {
+        data(i, (int)ceil((float)windowSize / 2.0)) = randWordDistribution(generator);
+    }
+
+    return data;
 }

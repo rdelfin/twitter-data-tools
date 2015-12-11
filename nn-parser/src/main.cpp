@@ -8,25 +8,26 @@
 #include <Eigen/Dense>
 #include <functional>
 #include <cmath>
+#include <cppoptlib/meta.h>
+#include <cppoptlib/problem.h>
+#include <cppoptlib/solver/lbfgssolver.h>
 
 double recp(double x) {
     return 1.0 / x;
 }
 
 int main(int argc, char* argv[]) {
-    WordNeuralNetwork network(5, 3, 1, [](const Eigen::MatrixXd& in)-> Eigen::MatrixXd {
+    /*                        windowSize, embeddingSize, dictionarySize, hidden, replacements */
+    WordNeuralNetwork network(5,          10,            10000,          10,     10000,
+    [](const Eigen::MatrixXd& in)-> Eigen::MatrixXd {
         Eigen::MatrixXd exponent = (-1.0 * in).unaryExpr(std::ptr_fun(exp));
         Eigen::MatrixXd ones = Eigen::MatrixXd::Constant(in.rows(), in.cols(), 1.0);
         return (ones + exponent).unaryExpr(std::ptr_fun(recp));
     });
 
-
-    Eigen::MatrixXd in = Eigen::MatrixXd::Random(4, 5);
-    Eigen::MatrixXd out = network(in);
-    std::cout << "in = " << std::endl
-              << in << std::endl
-              << "out = " << std::endl
-              << out << std::endl;
+    cppoptlib::LbfgsSolver<double> solver;
+    cppoptlib::Vector<double> startParams(10);
+    solver.minimize(network, startParams);
 
     return 0;
 }

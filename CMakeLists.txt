@@ -5,12 +5,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Requirements
 find_package (Threads REQUIRED)
+find_package (Armadillo REQUIRED)
 
-set(LINK-DIRS ${CMAKE_THREAD_LIBS_INIT})
+set(LINK-DIRS ${ARMADILLO_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 # Include directories. Should contain the include folder, as well as libraries
 include_directories(include
-                    ${Jsoncpp_INCLUDE_DIR})
+                    ${ARMADILLO_INCLUDE_DIRS})
 
 set(NEURAL-NETWORK_SRC neural-network/src/WordNeuralNetwork.cpp)
 set(REPRESENTATION-PARSER_SRC representation-parser/src/dictionary-generator.cpp
@@ -29,9 +30,6 @@ add_executable(dictionary ${REPRESENTATION-PARSER_SRC} ${TOOLS-LIB_SRC})
 target_link_libraries(dictionary ${LINK-DIRS})
 
 # Neural network representation executable and linking
-message("NEURAL NETWORK SRC: ${NERUAL-NETWORK_SRC}")
-message("NN PARSER SRC: ${NN-PARSER_SRC}")
-message("TOOLS LIB SRC: ${TOOLS-LIB_SRC}")
 add_executable(nn-representation ${NEURAL-NETWORK_SRC} ${TOOLS-LIB_SRC} ${NN-PARSER_SRC})
 target_link_libraries(nn-representation ${LINK-DIRS})
 
@@ -40,7 +38,10 @@ target_link_libraries(nn-representation ${LINK-DIRS})
 add_custom_target(CopyConfig ${CMAKE_COMMAND} -E copy_directory
                   ${CMAKE_CURRENT_SOURCE_DIR}/config
                   ${CMAKE_CURRENT_BINARY_DIR}/config)
-add_dependencies(dictionary CopyConfig)
+add_custom_target(CopyData ${CMAKE_COMMAND} -E copy_directory
+                  ${CMAKE_CURRENT_SOURCE_DIR}/data
+                  ${CMAKE_CURRENT_BINARY_DIR}/data`)
+add_dependencies(dictionary CopyConfig CopyData)
 
 
 #CMAKE_RUNTIME_OUTPUT_DIRECTORY
