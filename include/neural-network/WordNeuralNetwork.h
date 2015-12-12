@@ -24,6 +24,8 @@ public:
 
     double value(const cppoptlib::Vector<double>& x);
 
+    long numParams() { return embeddings.rows()*embeddings.cols() + theta1.rows()*theta1.cols() + theta2.rows()*theta2.cols(); }
+
     void cost();
     void costDerivative();
 

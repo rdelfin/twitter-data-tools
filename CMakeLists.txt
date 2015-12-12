@@ -40,8 +40,9 @@ add_custom_target(CopyConfig ${CMAKE_COMMAND} -E copy_directory
                   ${CMAKE_CURRENT_BINARY_DIR}/config)
 add_custom_target(CopyData ${CMAKE_COMMAND} -E copy_directory
                   ${CMAKE_CURRENT_SOURCE_DIR}/data
-                  ${CMAKE_CURRENT_BINARY_DIR}/data`)
-add_dependencies(dictionary CopyConfig CopyData)
+                  ${CMAKE_CURRENT_BINARY_DIR}/data)
+add_dependencies(dictionary CopyConfig)
+add_dependencies(nn-representation CopyData)
 
 
 #CMAKE_RUNTIME_OUTPUT_DIRECTORY

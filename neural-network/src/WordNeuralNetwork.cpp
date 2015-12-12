@@ -5,6 +5,10 @@
 #include "neural-network/WordNeuralNetwork.h"
 #include <algorithm>
 
+double zeroMax(double in) {
+    return std::max(0.0, in);
+}
+
 WordNeuralNetwork::WordNeuralNetwork(unsigned windowSize, unsigned embeddingSize, unsigned dictionarySize,
                                      unsigned replacements, unsigned hidden, ActivationFunction func)
         : activation(func), inputN(windowSize*embeddingSize), outputN(1), hiddenN(hidden), windowSize(windowSize),
@@ -76,14 +80,9 @@ double WordNeuralNetwork::value(const cppoptlib::Vector<double> &x) {
         }
     }
 
+    // These three lines implement the max function described in line 4 of the paper (Collobert, Weston, 2008)
     Eigen::MatrixXd scores = Eigen::MatrixXd::Constant(replaced.rows(), replaced.cols(), 1) - replicatedResult + replacedResult;
-
-    for(int i = 0; i < scores.rows(); i++) {
-        for(int j = 0; j < scores.cols(); j++) {
-            scores(i, j) = std::max(0.0, scores(i, j));
-        }
-    }
-
+    scores = scores.unaryExpr(std::ptr_fun(zeroMax));
     return scores.sum();
 }
 
