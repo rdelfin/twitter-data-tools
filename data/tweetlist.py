@@ -24,5 +24,5 @@ def getTweets(dictionaryFile, tweetFile):
 
 def tweetBigramDist(tweets):
     sentenceBigrams = [list(nltk.bigrams(tweet)) for tweet in tweets]
-    tweetBigrams = [bigram from bigram in sentence
-    tweetBigrams = nltk.bigrams(
+    tweetBigrams = [bigram for sentence in sentenceBigrams for bigram in sentence]
+    return nltk.ConditionalFreqDist(tweetBigrams)
